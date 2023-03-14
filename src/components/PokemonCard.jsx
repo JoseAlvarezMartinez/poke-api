@@ -1,17 +1,9 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { consumirImg } from "../helpers/pokemons";
+import useGetImage from "../customHooks/useGetImage";
 const PokemonCard = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
-  const [image, setImage] = useState("");
-  const imgPokemon = async () => {
-    const newImages = await consumirImg(state.url);
-    setImage(newImages);
-  };
-  useEffect(() => {
-    imgPokemon();
-  });
+  const [image] = useGetImage(state.url);
   return (
     <div>
       <button onClick={() => navigate("/")}>Volver</button>

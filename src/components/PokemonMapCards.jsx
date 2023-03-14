@@ -1,15 +1,7 @@
-import { useEffect, useState } from "react";
-import { consumirImg } from "../helpers/pokemons";
+import useGetImage from "../customHooks/useGetImage";
 const PokemonMapCards = ({ pokemon }) => {
   const { name, url } = pokemon;
-  const [image, setImage] = useState("");
-  const getImages = async () => {
-    const newImages = await consumirImg(url);
-    setImage(newImages);
-  };
-  useEffect(() => {
-    getImages();
-  }, []);
+  const [image] = useGetImage(url);
   return (
     <div>
       <h2>{name}</h2>
