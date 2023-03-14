@@ -1,9 +1,8 @@
-import React from 'react'
-
+import { useLoaderData } from "react-router-dom";
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+  const pokemons = useLoaderData();
+  console.log(pokemons)
+  return <></>;
+};
 
-export default Home
+export default Home;

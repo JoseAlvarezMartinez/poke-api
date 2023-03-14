@@ -1,19 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import { createBrowserRouter,RouterProvider } from 'react-router-dom';
-import reportWebVitals from './reportWebVitals';
-import Home from "./pages/Home"
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
+import Home from "./pages/Home";
+import { loader as PokemonLoader } from "./helpers/pokemons";
 const router = createBrowserRouter([
   {
-    path:"/",
-    element:<Home/>
-  }
-])
-const root = ReactDOM.createRoot(document.getElementById('root'));
+    path: "/",
+    element: <Home />,
+    loader:PokemonLoader
+  },
+]);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
