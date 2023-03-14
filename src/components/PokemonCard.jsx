@@ -12,8 +12,8 @@ const PokemonCard = ({ pokemon }) => {
   }, []);
   return (
     <div>
-      <h2>{name}</h2>
       <img src={image} alt="" />
+      <h2>{name}</h2>
     </div>
   );
 };

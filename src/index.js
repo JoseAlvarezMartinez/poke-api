@@ -5,11 +5,16 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/Home";
 import { loader as PokemonLoader } from "./helpers/pokemons";
+import PokeCardIndividual from "./components/PokeCardIndividual";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    loader:PokemonLoader
+    loader: PokemonLoader,
+  },
+  {
+    path: "/pokemon/:id",
+    element: <PokeCardIndividual />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));

@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 import PokemonCard from "../components/PokemonCard";
 const Home = () => {
   const pokemons = useLoaderData();
@@ -6,7 +6,13 @@ const Home = () => {
   return (
     <>
       {pokemons.map((pokemon) => (
-        <PokemonCard key={pokemon.name} pokemon={pokemon} />
+        <Link
+          to={`/pokemon/${pokemon.name}`}
+          key={pokemon.name}
+          state={pokemon}
+        >
+          <PokemonCard pokemon={pokemon} />
+        </Link>
       ))}
     </>
   );
