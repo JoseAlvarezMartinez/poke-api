@@ -1,0 +1,53 @@
+[33mcommit 216f21410acc34eba3f2dab947b9b48ecf033def[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: JoseAlvarezMartinez <alvarezmjose2021@gmail.com>
+Date:   Tue Mar 14 18:53:41 2023 -0300
+
+    -- Optimizacion del codigo --
+
+[33mcommit 20e24963572a990430ff0c96cd2e947beaa6a9ba[m
+Author: JoseAlvarezMartinez <alvarezmjose2021@gmail.com>
+Date:   Tue Mar 14 18:26:16 2023 -0300
+
+    -- Rutas Dinamicas --
+
+[33mcommit c44540f55a78e70d59f7bdbb4b3957eeebdf440c[m
+Author: JoseAlvarezMartinez <alvarezmjose2021@gmail.com>
+Date:   Tue Mar 14 18:19:41 2023 -0300
+
+    -- Fetch Images --
+
+[33mcommit 838695e0a5f939ecac87d5396ed3401885dfdfc4[m
+Author: JoseAlvarezMartinez <alvarezmjose2021@gmail.com>
+Date:   Tue Mar 14 18:07:26 2023 -0300
+
+    -- UseLoaderData --
+
+[33mcommit b7e40d8d706aa4eb47d20500ee95333eefefd690[m
+Author: JoseAlvarezMartinez <alvarezmjose2021@gmail.com>
+Date:   Tue Mar 14 17:51:12 2023 -0300
+
+    -- Home Page --
+
+[33mcommit cd0b7f9e4dc683b141868d5fbe56646944167b75[m
+Author: JoseAlvarezMartinez <alvarezmjose2021@gmail.com>
+Date:   Tue Mar 14 17:49:12 2023 -0300
+
+    -- Router DOM --
+
+[33mcommit 954bac07c22ac177ecfa22d806fab87cebb18b70[m
+Author: JoseAlvarezMartinez <alvarezmjose2021@gmail.com>
+Date:   Tue Mar 14 17:47:50 2023 -0300
+
+    -- Fonts --
+
+[33mcommit 1a4ce1ef373270a68981863c7c5e417f70a80e84[m
+Author: JoseAlvarezMartinez <alvarezmjose2021@gmail.com>
+Date:   Tue Mar 14 17:46:43 2023 -0300
+
+    -- Normalize --
+
+[33mcommit 729c95786fe80603481e1a6a8e71ab8b61f21d38[m
+Author: JoseAlvarezMartinez <alvarezmjose2021@gmail.com>
+Date:   Tue Mar 14 17:24:01 2023 -0300
+
+    Initialize project using Create React App
