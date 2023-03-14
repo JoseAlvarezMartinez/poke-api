@@ -3,3 +3,8 @@ export async function loader() {
   const { results } = await respuesta.json();
   return results;
 }
+export async function consumirImg(urlPokemon) {
+  const respuesta = await fetch(urlPokemon);
+  const resultado = await respuesta.json();
+  return resultado.sprites.front_default;
+}
