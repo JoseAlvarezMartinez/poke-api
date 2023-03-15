@@ -2,7 +2,7 @@ import useGetImage from "../customHooks/useGetImage";
 import styles from "./PokemonMapCards.module.css";
 const PokemonMapCards = ({ pokemon }) => {
   let { name, url } = pokemon;
-  console.log(pokemon)
+
   const [image] = useGetImage(url);
   name = name.charAt().toUpperCase() + name.slice(1);
 
