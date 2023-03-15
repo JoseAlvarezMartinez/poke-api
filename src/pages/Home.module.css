@@ -4,5 +4,17 @@
 header {
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+  background: #000000dc;
+}
+header input {
+  margin-top: 1rem;
+
+  padding: 0.4rem 2rem;
+  outline: none;
+}
+main {
+  margin: 3rem 0;
 }

@@ -8,10 +8,16 @@ const Home = () => {
     <>
       <header className={styles.header}>
         <img src={Logo} className={styles.logo} alt="Logotipo de Pokemon" />
+        <input autoFocus type="text" placeholder="Buscar pokemon"/>
       </header>
       <main>
         {pokemons.map((pokemon) => (
-          <Link className={styles.navegacion} to={`/${pokemon.name}`} key={pokemon.name} state={pokemon}>
+          <Link
+            className={styles.navegacion}
+            to={`/${pokemon.name}`}
+            key={pokemon.name}
+            state={pokemon}
+          >
             <PokemonMapCards pokemon={pokemon} />
           </Link>
         ))}
