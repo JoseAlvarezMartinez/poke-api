@@ -1,7 +1,7 @@
 .pokemonCard {
   background-color: rgba(128, 128, 128, 0.192);
   width: 15rem;
-  height: 20rem;
+  height: 25rem;
   border-radius: 0.4rem;
   margin: 2rem auto;
   transition: all 0.4s;

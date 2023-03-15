@@ -1,11 +1,11 @@
 import useGetImage from "../customHooks/useGetImage";
 import styles from "./PokemonMapCards.module.css";
+import { useEffect } from "react";
 const PokemonMapCards = ({ pokemon }) => {
   let { name, url } = pokemon;
 
-  const [image] = useGetImage(url);
+  const [{ image, informacion }] = useGetImage(url, pokemon);
   name = name.charAt().toUpperCase() + name.slice(1);
-
   return (
     <div className={styles.pokemonCard}>
       <div className={styles.pokeContainer}>

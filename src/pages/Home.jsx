@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from "react-router-dom";
+import {  useLoaderData } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PokemonMapCards from "../components/PokemonMapCards";
 import Logo from "../assets/logo.png";
