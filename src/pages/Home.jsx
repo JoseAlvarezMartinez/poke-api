@@ -38,7 +38,7 @@ const Home = () => {
             ))}
             {pokemonFilter.length == 0 && (
               <p className={styles.noEncontrado}>
-                El pokemon filtrado no existe
+                El pokemon filtrado no se encontró
               </p>
             )}
           </>

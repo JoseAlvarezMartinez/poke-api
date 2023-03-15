@@ -1,0 +1,19 @@
+.contenedorSuperior {
+  display: flex;
+  align-items: center;
+  width: 18rem;
+  margin: 0 auto;
+}
+.name {
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+.volverBoton{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    margin-right: 1rem;
+}
+main{
+    margin: 2rem 0;
+}
