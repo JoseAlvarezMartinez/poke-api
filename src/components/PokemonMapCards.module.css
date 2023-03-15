@@ -5,6 +5,7 @@
   border-radius: 0.4rem;
   margin: 2rem auto;
   transition: all 0.4s;
+  border: 1px solid #00000030;
 }
 .pokemonCard:hover {
   transform: scale(1.05);
@@ -17,8 +18,8 @@
   height: 30vh;
 }
 .pokeContainer img {
-  margin-top: 5rem;
-  width: 10rem;
+  margin-top: 6rem;
+  width: 13rem;
 }
 a {
   text-decoration: none;
