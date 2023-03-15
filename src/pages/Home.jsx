@@ -27,14 +27,7 @@ const Home = () => {
         {inputPokemon.length ? (
           <>
             {pokemonFilter.map((pokemon) => (
-              <Link
-                className={styles.navegacion}
-                to={`/${pokemon.name}`}
-                key={pokemon.name}
-                state={pokemon}
-              >
-                <PokemonMapCards pokemon={pokemon} />
-              </Link>
+              <PokemonMapCards pokemon={pokemon} />
             ))}
             {pokemonFilter.length == 0 && (
               <p className={styles.noEncontrado}>
@@ -45,14 +38,7 @@ const Home = () => {
         ) : (
           <>
             {pokemons.map((pokemon) => (
-              <Link
-                className={styles.navegacion}
-                to={`/${pokemon.name}`}
-                key={pokemon.name}
-                state={pokemon}
-              >
-                <PokemonMapCards pokemon={pokemon} />
-              </Link>
+              <PokemonMapCards pokemon={pokemon} />
             ))}
           </>
         )}

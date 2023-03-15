@@ -12,11 +12,6 @@ const router = createBrowserRouter([
     element: <Home />,
     loader: PokemonLoader,
   },
-
-  {
-    path: "/:id",
-    element: <PokemonCard />,
-  },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={router} />);
