@@ -3,22 +3,14 @@ import { useState, useEffect } from "react";
 import PokemonMapCards from "../components/PokemonMapCards";
 import Logo from "../assets/logo.png";
 import styles from "./Home.module.css";
+import { filtrarPokemones } from "../helpers/funciones";
 const Home = () => {
   const pokemons = useLoaderData();
   const [inputPokemon, setInputPokemon] = useState("");
   const [pokemonFilter, setPokemonFilter] = useState([]);
-  const filtrarPokemones = () => {
-    if (inputPokemon) {
-      const filtrado = pokemons.filter((pokemon) =>
-        pokemon.name.includes(inputPokemon.toLowerCase())
-      );
-      setPokemonFilter(filtrado);
-    } else {
-      setPokemonFilter([]);
-    }
-  };
+
   useEffect(() => {
-    filtrarPokemones();
+    filtrarPokemones(inputPokemon, pokemons, setPokemonFilter);
   }, [inputPokemon]);
   return (
     <>
@@ -44,7 +36,11 @@ const Home = () => {
                 <PokemonMapCards pokemon={pokemon} />
               </Link>
             ))}
-            {pokemonFilter.length == 0 && <p className={styles.noEncontrado}>El pokemon filtrado no existe</p>}
+            {pokemonFilter.length == 0 && (
+              <p className={styles.noEncontrado}>
+                El pokemon filtrado no existe
+              </p>
+            )}
           </>
         ) : (
           <>
