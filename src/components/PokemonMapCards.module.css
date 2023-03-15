@@ -9,26 +9,32 @@
 .pokemonCard:hover {
   transform: scale(1.05);
 }
-.pokeContainer{
+.pokeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+}
+.pokeContainer img {
+  margin-top: 5rem;
+  width: 10rem;
+}
+a {
+  text-decoration: none;
+}
+h2{
+    color: #000;
+    font-weight: 300;
+}
+main {
+  margin: 0 2rem;
+}
+@media only screen and (min-width: 500px) {
+  main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    height:30vh;
+    gap: 2rem;
+  }
 }
-.pokeContainer img{
-    margin-top: 5rem;
-    width: 10rem;
-}
-main{
-    margin: 0 2rem;
-}
-@media only screen and (min-width: 500px){
-    main{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
-    }
-}
-

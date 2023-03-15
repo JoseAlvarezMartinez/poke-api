@@ -1,5 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import useGetImage from "../customHooks/useGetImage";
+import styles from "./PokemonCard.module.css"
 const PokemonCard = () => {
   const navigate = useNavigate();
   const { state } = useLocation();

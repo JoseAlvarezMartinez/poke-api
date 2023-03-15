@@ -11,7 +11,7 @@ const Home = () => {
       </header>
       <main>
         {pokemons.map((pokemon) => (
-          <Link to={`/${pokemon.name}`} key={pokemon.name} state={pokemon}>
+          <Link className={styles.navegacion} to={`/${pokemon.name}`} key={pokemon.name} state={pokemon}>
             <PokemonMapCards pokemon={pokemon} />
           </Link>
         ))}
