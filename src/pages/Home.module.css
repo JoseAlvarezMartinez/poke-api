@@ -18,3 +18,7 @@ header input {
 main {
   margin: 3rem 0;
 }
+.noEncontrado{
+  font-weight: 300;
+  text-transform: uppercase;
+}

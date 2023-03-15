@@ -44,6 +44,7 @@ const Home = () => {
                 <PokemonMapCards pokemon={pokemon} />
               </Link>
             ))}
+            {pokemonFilter.length == 0 && <p className={styles.noEncontrado}>El pokemon filtrado no existe</p>}
           </>
         ) : (
           <>
