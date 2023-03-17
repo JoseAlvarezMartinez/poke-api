@@ -1,13 +1,13 @@
 import { useState,useEffect } from "react";
-import { consumirImg } from "../helpers/pokemons";
+import { pokemonInfo } from "../helpers/pokemons";
 const useGetImage = (url) => {
   const [image, setImage] = useState({});
-  const getImages = async () => {
-    const newImages = await consumirImg(url);
-    setImage(newImages);
+  const getInfo = async () => {
+    const newInfo = await pokemonInfo(url);
+    setImage(newInfo);
   };
   useEffect(() => {
-    getImages();
+    getInfo();
   }, []);
   return [image]
 };

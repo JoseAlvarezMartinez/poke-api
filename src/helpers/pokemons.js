@@ -4,7 +4,7 @@ export async function loader() {
   const { results } = await respuesta.json();
   return results;
 }
-export async function consumirImg(urlPokemon) {
+export async function pokemonInfo(urlPokemon) {
   const respuesta = await fetch(urlPokemon);
   const resultado = await respuesta.json();
   return resultado;
