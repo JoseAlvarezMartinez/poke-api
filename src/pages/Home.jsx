@@ -1,14 +1,14 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { filtrarPokemones } from "../helpers/funciones";
 import PokemonMapCards from "../components/PokemonMapCards";
 import Logo from "../assets/logo.png";
 import styles from "./Home.module.css";
-import { filtrarPokemones } from "../helpers/funciones";
 const Home = () => {
   const pokemons = useLoaderData();
   const [inputPokemon, setInputPokemon] = useState("");
   const [pokemonFilter, setPokemonFilter] = useState([]);
-
+  
   useEffect(() => {
     filtrarPokemones(inputPokemon, pokemons, setPokemonFilter);
   }, [inputPokemon]);
@@ -27,7 +27,7 @@ const Home = () => {
         {inputPokemon.length ? (
           <>
             {pokemonFilter.map((pokemon) => (
-              <PokemonMapCards pokemon={pokemon} />
+              <PokemonMapCards key={pokemon.name} pokemon={pokemon} />
             ))}
             {pokemonFilter.length == 0 && (
               <p className={styles.noEncontrado}>
@@ -38,7 +38,7 @@ const Home = () => {
         ) : (
           <>
             {pokemons.map((pokemon) => (
-              <PokemonMapCards pokemon={pokemon} />
+              <PokemonMapCards key={pokemon.name} pokemon={pokemon} />
             ))}
           </>
         )}
