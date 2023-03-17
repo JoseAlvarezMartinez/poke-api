@@ -4,7 +4,6 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/Home";
-import PokemonCard from "./components/PokemonCard";
 import { loader as PokemonLoader } from "./helpers/pokemons";
 const router = createBrowserRouter([
   {
