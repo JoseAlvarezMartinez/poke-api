@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+import { TbWeight } from "react-icons/tb";
+import { TfiRuler } from "react-icons/tfi";
 import useGetImage from "../customHooks/useGetImage";
 import styles from "./PokemonMapCards.module.css";
+
 const PokemonMapCards = ({ pokemon }) => {
   let { name, url } = pokemon;
   const [statsInfo, setStatsInfo] = useState({});
@@ -16,8 +19,14 @@ const PokemonMapCards = ({ pokemon }) => {
     <div className={styles.pokemonCard}>
       <div className={styles.pokeContainer}>
         <img src={image.sprites?.front_default} alt={`Imagen de ${name}`} />
-        <h2>{name}</h2>
-        <p>{image.weight}</p>
+        <div>
+          <h2>{name}</h2>
+          <TbWeight />
+        </div>
+        <div>
+          <p>{image.weight}</p>
+          <TfiRuler />
+        </div>
         <p>0{image.height}</p>
         <p>0{statsInfo[0]}</p>
         <p>0{statsInfo[1]}</p>
