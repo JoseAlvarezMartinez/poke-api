@@ -19,18 +19,21 @@ const PokemonMapCards = ({ pokemon }) => {
     <div className={styles.pokemonCard}>
       <div className={styles.pokeContainer}>
         <img src={image.sprites?.front_default} alt={`Imagen de ${name}`} />
-        <div>
-          <h2>{name}</h2>
+
+        <h2>{name}</h2>
+
+        <div className={styles.iconContainer}>
           <TbWeight />
-        </div>
-        <div>
+
           <p>{image.weight}</p>
-          <TfiRuler />
         </div>
-        <p>0{image.height}</p>
-        <p>0{statsInfo[0]}</p>
-        <p>0{statsInfo[1]}</p>
-        <p>0{statsInfo[2]}</p>
+        <div className={styles.iconContainer}>
+          <TfiRuler />
+          <p>0{image.height}</p>
+        </div>
+        <p>HP: 0{statsInfo[0]}</p>
+        <p>ATK: 0{statsInfo[1]}</p>
+        <p>DEF: 0{statsInfo[2]}</p>
       </div>
     </div>
   );
