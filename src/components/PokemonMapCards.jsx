@@ -7,6 +7,7 @@ import styles from "./PokemonMapCards.module.css";
 const PokemonMapCards = ({ pokemon }) => {
   let { name, url } = pokemon;
   const [statsInfo, setStatsInfo] = useState({});
+  const [peso,setPeso] = useState("")
   const [image] = useGetImage(url);
   const { stats } = image;
 
@@ -14,6 +15,7 @@ const PokemonMapCards = ({ pokemon }) => {
     if (stats == undefined) return;
     const statsInformacion = stats.map((stat) => stat.base_stat);
     setStatsInfo(statsInformacion);
+    setPeso(image.weight.toString().slice(0,-1))
   }, [stats]);
   return (
     <div className={styles.pokemonCard}>
@@ -25,7 +27,7 @@ const PokemonMapCards = ({ pokemon }) => {
         <div className={styles.iconContainer}>
           <TbWeight />
 
-          <p>{image.weight}</p>
+          <p>{peso}</p>
         </div>
         <div className={styles.iconContainer}>
           <TfiRuler />
